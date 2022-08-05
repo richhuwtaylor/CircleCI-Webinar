@@ -108,7 +108,7 @@ jobs:
             - run:
                 name: Authenticate Deploy Target
                 command: |
-                    echo $DEPLOY_URL > ~/tmp/orgs/mastertarget.auth
+                    echo $SFDX_DEVHUB_URL > ~/tmp/orgs/mastertarget.auth
                     sfdx force:auth:sfdxurl:store -f ~/tmp/orgs/mastertarget.auth -s -a deployTarget
             - run:
                 name: Convert SFDX source to Metadata Bundle
